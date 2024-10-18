@@ -1,0 +1,24 @@
+{% extends "pages/base.html"%}
+
+{% block content %}
+
+    <a href="{% url 'new_topic' %}" class="adicionar">Adicionar novo tópico</a>
+
+    <div class="card-container">
+        {% for topic in topics %}
+            <div class="card">
+                <a href="{% url 'topic' topic.id %}" class="link">
+                    <div class="card-content">
+                        <h3>{{ topic }}</h3>
+                    </div>
+                </a>
+            </div>
+        {% empty %}
+            <p>Não há tópicos adicionados.</p>
+        {% endfor %}
+    </div>
+
+    
+
+
+{% endblock content %}

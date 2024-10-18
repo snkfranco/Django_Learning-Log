@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="snkfranco"/>
+    <!-- Incluindo seu próprio arquivo CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'learning_logs/css/styles.css' %}">
+    <title>Learning Log</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'index' %}">Learning Log</a>
+            </div>
+
+            <div id="navbar" class="nav">
+                <ul class="nav navbar-right">
+                    <li><a href="{% url 'topics' %}">Topics</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a>Olá, {{ user.username }}</a></li>
+                        <li><a href="{% url 'logout' %}">Sair</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}">Entrar</a></li>
+                        <li><a href="{% url 'register' %}">Registrar</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container1">
+        <div class="page-header">
+            {% block header %}{% endblock header %}
+        </div>
+        <div>
+            {% block content %}{% endblock content %}
+        </div>
+    </div>
+
+</body>
+</html>

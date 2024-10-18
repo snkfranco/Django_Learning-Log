@@ -1,0 +1,300 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.container1 {
+    display: flex;
+    justify-items: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+/* Estilizando a navbar */
+.navbar {
+    background-color: #222222;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo à esquerda */
+.navbar-header .navbar-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+.navbar-header .navbar-brand:hover {
+    color: #ff9900;
+}
+
+/* Lista de navegação à esquerda */
+.topicos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Links da navegação (à esquerda) */
+.topicos li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.topicos li a:hover {
+    background-color: #ff9900;
+    color: #333;
+
+}
+
+/* Lista de navegação à direita (Entrar/Registrar) */
+.navbar-right {
+    margin-left: auto;
+    /* Empurra a lista para a extrema direita */
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Links da navegação (à direita) */
+.navbar-right li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right li a:hover {
+    background-color: #ff9900;
+    color: #333;
+}
+
+.link {
+    text-decoration: none;
+    color: #ff9900;
+    /* ou escolha uma cor específica, como color: black; */
+}
+
+.adicionar {
+    display: inline-block;
+    /* ou block, se preferir */
+    margin: 20px;
+    /* Adiciona espaço abaixo do botão */
+    padding: 10px 15px;
+    background-color: #ffa600;
+    /* Cor de fundo */
+    color: white;
+    /* Cor do texto */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Espaçamento entre os cards */
+}
+
+.card {
+    background-color: #f9f9f91a;
+    /* Cor de fundo do card */
+    border-radius: 10px;
+    /* Borda arredondada */
+    border: 1px solid #ddd;
+    /* Borda sutil ao redor do card */
+    padding: 10px;
+    /* Espaçamento interno */
+    margin-bottom: 20px;
+    /* Espaçamento entre os cards */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar profundidade */
+}
+
+.card-content {
+    margin: 20px;
+}
+
+.card-list {
+    list-style: none;
+    /* Remove as bolinhas padrão de listas */
+    padding: 0;
+    /* Remove padding padrão */
+    margin: 0;
+    /* Remove margens padrão */
+}
+
+.card-list-item {
+    background-color: #f9f9f91a;
+    /* Cor de fundo do card */
+    border-radius: 10px;
+    /* Borda arredondada */
+    border: 1px solid #ddd;
+    /* Borda sutil ao redor do card */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin-bottom: 20px;
+    /* Espaçamento entre os cards */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar profundidade */
+}
+
+.card-list-item p {
+    margin: 0 0 10px;
+    /* Espaçamento entre os parágrafos */
+}
+
+.card-list-item .edit-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+    /* Cor do link */
+}
+
+.card-list-item .edit-link:hover {
+    text-decoration: underline;
+    /* Sublinhado ao passar o mouse */
+}
+
+.editar {
+    background-color: #ff9900;
+    text-decoration: none;
+    color: rgb(19, 19, 19);
+    padding: 5px;
+    border-radius: 4px;
+
+}
+
+
+/* Estilo para o contêiner do formulário */
+.form {
+    max-width: 400px;
+    /* Largura máxima */
+    margin: auto;
+    /* Centraliza o formulário */
+    padding: 20px;
+    /* Espaçamento interno */
+}
+
+.custom-textfield {
+    background-color: #f0f0f036;
+    /* Defina a cor de fundo desejada */
+    border: 1px solid #ccc;
+    /* Adicione uma borda, se desejar */
+    padding: 10px;
+    /* Adicione um padding para espaço interno */
+    border-radius: 5px;
+    /* Borda arredondada */
+}
+
+/* Estilo para os campos de entrada */
+.form input {
+    width: 100%;
+    /* Largura total */
+    padding: 10px;
+    /* Espaçamento interno */
+    margin-bottom: 15px;
+    /* Espaçamento entre campos */
+    border: 1px solid #ccc;
+    /* Borda cinza */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    font-size: 16px;
+    /* Tamanho da fonte */
+}
+
+/* Estilo para o botão Entrar */
+.botao {
+    background-color: #ff9100;
+    /* Cor de fundo verde */
+    border: none;
+    /* Sem borda */
+    color: white;
+    /* Texto branco */
+    padding: 10px 15px;
+    /* Espaçamento do botão */
+    text-align: center;
+    /* Centraliza o texto */
+    text-decoration: none;
+    /* Sem sublinhado */
+    display: inline-block;
+    /* Permite definir tamanho */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    margin: 4px 2px;
+    /* Margem ao redor */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    transition: background-color 0.3s;
+    /* Transição suave para a cor de fundo */
+}
+
+.botao:hover {
+    background-color: #ffa600;
+    /* Cor de fundo ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade: empilhando conteúdo em telas pequenas */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-right {
+        margin-left: 0;
+        /* Remove o margin-left em telas pequenas */
+        margin-top: 1rem;
+    }
+
+    .topicos,
+    .navbar-right {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,20 @@
+
+
+{% extends "pages/base.html" %}
+
+{% load static %}
+
+{% block header%}
+    <h2>Adicione um novo tópico</h2>
+{% endblock header%}
+
+{% block content %}
+
+    <form action="{% url 'new_topic' %}" method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button name="submit" class="botao">Adicionar</button>
+    </form>
+
+{% endblock content %}

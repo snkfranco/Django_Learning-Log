@@ -1,0 +1,17 @@
+{% extends "pages/base.html"%}
+
+{% block header %}
+    <h2>Registre-se com uma nova conta.</h2>
+{% endblock header %}
+
+{%block content%}
+
+    <form action="{% url 'register' %}" method='POST' class="form">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button name="submit" class="botao">Registrar</button>
+        <input type="hidden" name="next" value="{% url 'index' %}"/>
+    </form>
+
+{%endblock content%}
